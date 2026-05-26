@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grader 3000</title>
+  <link rel="stylesheet" href="./style.css" />
+
+  <script src="./js/model.js" defer></script>
+  <script src="./js/view.js" defer></script>
+  <script src="./js/controller.js" defer></script>
+  <script src="./js/app.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div>
+        <h1>Grader 3000</h1>
+      </div>
+
+      <button id="resetButton" type="button">Zurücksetzen</button>
+    </header>
+
+    <section class="grid">
+      <section class="card">
+        <h2>Eingaben</h2>
+        <p class="hint">Werte zwischen 0 und 100 eingeben.</p>
+
+        <div id="gradeInputs" class="inputs"></div>
+      </section>
+
+      <section class="card result-card">
+        <h2>Ergebnis</h2>
+
+        <div id="finalGrade" class="final-grade">—</div>
+
+        <div class="result-row">
+          <span>Übungsnote</span>
+          <strong id="exerciseGrade">0%</strong>
+        </div>
+
+        <div class="result-row">
+          <span>Prüfungsnote</span>
+          <strong id="examGrade">0%</strong>
+        </div>
+
+        <div class="result-row">
+          <span>Anwesenheit</span>
+          <strong id="attendanceGrade">0%</strong>
+        </div>
+
+        <div class="result-row total">
+          <span>Gesamtnote</span>
+          <strong id="totalGrade">0%</strong>
+        </div>
+
+        <div id="formula" class="formula">
+          Gesamt = 0 × 0,6 + 0 × 0,4 = 0%
+        </div>
+
+        <div id="messages" class="messages"></div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
